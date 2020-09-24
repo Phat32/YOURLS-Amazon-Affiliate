@@ -21,6 +21,7 @@ function flo_amazonAffiliate($args) {
 	$tagES = 'YOUR_TAG_HERE';
 	$tagJP = 'YOUR_TAG_HERE';
 	$tagAU = 'YOUR_TAG_HERE';
+	$tagCA = 'YOUR_TAG_HERE';
 	$campaign = 'YOUR_CAMPAIGN_HERE';
 	
 	// get url from arguments; create dictionary with all regex patterns and their respective affiliate tag as key/value pairs
@@ -28,13 +29,14 @@ function flo_amazonAffiliate($args) {
 	$patternTagPairs = array(
 		'/^http(s)?:\\/\\/(www\\.)?amazon.in+/ui' => $tagIN,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.it+/ui' => $tagIT,
-		'/^http(s)?:\\/\\/(www\\.)?amazon.com.au+/ui' => $tagAU,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.com+/ui' => $tagUS,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.de+/ui' => $tagDE,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.co.uk+/ui' => $tagUK,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.fr+/ui' => $tagFR,
 		'/^http(s)?:\\/\\/(www\\.)?amazon.es+/ui' => $tagES,
-		'/^http(s)?:\\/\\/(www\\.)?amazon.co.jp+/ui' => $tagJP
+		'/^http(s)?:\\/\\/(www\\.)?amazon.co.jp+/ui' => $tagJP,
+		'/^http(s)?:\\/\\/(www\\.)?amazon.com.au+/ui' => $tagAU,
+		'/^http(s)?:\\/\\/(www\\.)?amazon.ca+/ui' => $tagCA
 	);
 	
 	// check if URL is a supported Amazon URL
